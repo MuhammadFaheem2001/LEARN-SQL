@@ -1,0 +1,15 @@
+SELECT * FROM Customers
+LIMIT 3;
+
+SELECT first_name , last_name , age FROM Customers
+LIMIT 4;
+
+SELECT * FROM CUSTOMERS
+WHERE customer_id BETWEEN 1 AND 3;
+
+FUNTIONS 
+
+MIN , MAX
+COUNT
+AVG 
+SUM

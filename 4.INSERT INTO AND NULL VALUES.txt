@@ -1,0 +1,33 @@
+INSERT INTO CUSTOMERS (first_name , last_name , age)
+VALUES ("Muhammad" , "Faheem" , "22");
+
+INSERT INTO CUSTOMERS (customer_id , first_name , last_name , age , country)
+VALUES (7  ,"Muhammad" , "Faheem" , "22" , "PAKISTAN");
+
+INSERT INTO CUSTOMERS (first_name , last_name , age)
+VALUES ("RAMESH" , "KALU" , "40");
+
+INSERT INTO CUSTOMERS (customer_id , first_name , last_name , age)
+VALUES (8 ,"Muhammad" , "Faisal" , 30);
+
+INSERT INTO CUSTOMERS (first_name , last_name , age)
+VALUES ("Muhammad" , "Ikram" , 32);
+
+INSERT INTO CUSTOMERS (first_name , last_name , age)
+VALUES ("Muhammad" , "Saleem" , 55);
+
+INSERT INTO CUSTOMERS (customer_id , first_name , last_name , age , country)
+VALUES (7  ,"Muhammad" , "Faheem" , "22" , "PAKISTAN"),
+	   (8  ,"Muhammad" , "Shahid" , "35" , "SA"),
+       (9  ,"Muhammad" , "Kashif" , "45" , "NETHERSLAND"),
+       (10  ,"Muhammad" , "Naeem" , "63" , "USA");
+
+
+INSERT INTO CUSTOMERS (customer_id , first_name , last_name , age , country)
+VALUES (11  ,"Muhammad" , "" , "82" , "PAKISTAN");
+	
+SELECT * FROM Customers 
+WHERE last_name IS NOT NULL;
+
+SELECT * FROM Customers 
+WHERE last_name IS  NULL;

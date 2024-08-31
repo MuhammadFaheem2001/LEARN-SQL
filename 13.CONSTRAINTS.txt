@@ -1,0 +1,89 @@
+
+SQL CONTRAINTS:
+
+NOT NULL - Ensures that a column cannot have a NULL value
+UNIQUE - Ensures that all values in a column are different
+PRIMARY KEY - A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table
+FOREIGN KEY - Prevents actions that would destroy links between tables
+CHECK - Ensures that the values in a column satisfies a specific condition
+DEFAULT - Sets a default value for a column if no value is specified
+CREATE INDEX - Used to create and retrieve data from the database very quickly
+
+
+
+1. NOT NULL
+
+CREATE TABLE DISH(
+ID   INT			NOT NULL,
+NAME VARCHAR(255)	NOT NULL,
+AGE  INT			NOT NULL,
+DOB  INT			NOT NULL
+
+
+
+);
+
+2. NULL
+
+CREATE TABLE DISH(
+ID   INT			NULL,
+NAME VARCHAR(255)	NULL,
+AGE  INT			NULL,
+DOB  INT			NULL
+
+);
+
+
+3. PRIMARY KEY
+
+CREATE TABLE DISH(
+ID   INT			PRIMARY KEY,
+NAME VARCHAR(255)	PRIMARY KEY,
+AGE  INT			PRIMARY KEY,
+DOB  INT			PRIMARY KEY
+
+);
+
+4. FOREIGN KEY
+
+CREATE TABLE DISH(
+ID   INT			FOREIGN KEY,
+NAME VARCHAR(255)	FOREIGN KEY,
+AGE  INT			FOREIGN KEY,
+DOB  INT			FOREIGN KEY
+FOREIGN KEY (DOA)
+);
+
+5. UNIQUE
+
+CREATE TABLE DISH(
+ID   INT			UNIQUE,
+NAME VARCHAR(255)	UNIQUE,
+AGE  INT			UNIQUE,
+DOB  INT			UNIQUE
+UNIQUE (DOA)
+
+);
+
+6.CHECK
+
+
+CREATE TABLE DISH(
+ID   INT			FOREIGN KEY,
+NAME VARCHAR(255)	FOREIGN KEY,
+AGE  INT			FOREIGN KEY,
+DOB  INT			FOREIGN KEY
+CHECK (AGE>=18)
+);
+
+
+
+7. AUTO INCREMENT
+
+CREATE TABLE DISH(
+ID   INT			AUTO_INCREMENT,
+NAME VARCHAR(255)	FOREIGN KEY,
+AGE  INT			FOREIGN KEY,
+DOB  INT			FOREIGN KEY
+CHECK (AGE>=18)
+);

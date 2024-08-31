@@ -1,0 +1,18 @@
+SELECT MAX(amount)  AS amount  FROM Orders;
+
+SELECT MIN(amount)  AS amount  FROM Orders;
+
+SELECT COUNT(item) AS Total_items FROM Orders;
+
+SELECT AVG(amount)  AS amount  FROM Orders;
+
+SELECT SUM(amount) AS amount FROM Orders;
+
+SELECT  item ,SUM(amount) AS amount FROM Orders
+GROUP BY item
+ORDER BY item ASC;
+
+SELECT count(*) FROM Customers;
+
+
+

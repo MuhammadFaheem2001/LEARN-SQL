@@ -1,0 +1,27 @@
+SELECT * FROM Customers
+WHERE country LIKE "U_A";
+
+SELECT * FROM Customers
+WHERE country LIKE "UA_";
+
+SELECT * FROM Customers
+WHERE country LIKE "_K";
+
+SELECT first_name , last_name , age FROM Customers
+WHERE first_name LIKE "__hn";
+
+SELECT * FROM Orders
+WHERE amount BETWEEN 100 AND 500;
+
+SELECT first_name , last_name , age FROM Customers
+WHERE age BETWEEN 18 AND 28;
+
+SELECT item , amount , order_id FROM Orders
+WHERE item IN ("Keyboard" , "Monitor")
+ORDER BY item ASC;
+
+SELECT * FROM Customers
+WHERE country IN ("USA" , "UAE");
+
+SELECT first_name , last_name , age FROM Customers
+WHERE age > 28;

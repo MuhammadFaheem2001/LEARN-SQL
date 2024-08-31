@@ -1,0 +1,21 @@
+//YOU CAN PRACTICE ONLINE USING THIS LINK: https://www.programiz.com/sql/online-compiler/
+
+
+
+SELECT * FROM Customers;
+
+SELECT first_name , last_name , age FROM Customers;
+
+SELECT order_id , item , amount FROM Orders;
+
+SELECT shipping_id , status FROM Shippings;
+
+SELECT Country FROM Customers;
+
+SELECT customer FROM Shippings;
+
+SELECT DISTINCT country FROM Customers;
+
+SELECT DISTINCT first_name , last_name FROM Customers;
+
+SELECT DISTINCT item , amount FROM Orders;

@@ -1,0 +1,11 @@
+SELECT first_name AS FNAME , last_name AS LNAME , age AS AGE FROM Customers;
+
+SELECT first_name AS FNAME , last_name AS LNAME , age AS AGE FROM Customers
+WHERE customer_id = 1 OR 5
+GROUP BY age
+ORDER BY country ASC;
+
+
+SELECT  item AS COMPONENTS , amount AS PRICE FROM Orders
+ORDER BY item DESC;
+

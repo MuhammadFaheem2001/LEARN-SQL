@@ -1,0 +1,31 @@
+SELECT * FROM Customers
+WHERE country = "USA" OR country = "UAE";
+
+SELECT first_name , last_name , age FROM Customers
+WHERE customer_id = 1 AND  customer_id = 6;
+
+SELECT * FROM Customers
+WHERE NOT first_name = "John";
+
+SELECT item , amount FROM Orders
+WHERE order_id = 1 AND item = "Keyboard";
+
+SELECT first_name , last_name , age , country FROM Customers
+WHERE customer_id BETWEEN 1 AND 3
+ORDER BY first_name ASC;
+
+SELECT item , amount , order_id FROM Orders
+WHERE item LIKE "K%";
+
+SELECT * FROM Customers
+WHERE country NOT LIKE "USA";
+
+SELECT customer , status FROM Shippings
+WHERE shipping_id NOT BETWEEN 1 AND 3
+ORDER BY status DESC;
+
+SELECT * FROM Customers
+WHERE country NOT IN ("USA");
+
+SELECT first_name , last_name , age  , country FROM Customers
+WHERE country IN ("UAE" , "USA");

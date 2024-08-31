@@ -1,0 +1,19 @@
+SELECT * FROM CUSTOMERS
+WHERE first_name = "John" and Last_name = "Doe";
+
+SELECT first_name , last_name , age FROM Customers
+WHERE age > 25 and age < 50;
+
+SELECT item , amount FROM Orders
+ORDER BY order_id ASC;
+
+SELECT item , amount FROM Orders
+ORDER BY order_id DESC;
+
+SELECT * FROM Shippings 
+WHERE status = "Pending"
+ORDER BY shipping_id DESC;
+
+SELECT * FROM Shippings 
+WHERE status = "Pending"
+ORDER BY shipping_id ASC;

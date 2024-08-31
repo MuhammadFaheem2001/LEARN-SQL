@@ -1,0 +1,21 @@
+
+1. CASES:
+
+SELECT first_name , last_name , age ,
+CASE
+	WHEN age > 30 THEN "This is a man"
+	WHEN age >= 18 AND age <= 29 THEN "YOUNG MAN"
+	ELSE "code not run"
+END AS COMMENT
+FROM Customers;
+
+
+
+SELECT item , amount ,
+CASE 
+	WHEN amount > 400 THEN "AVERAGE RATES"
+    WHEN amount > 1000 THEN "RATES ARE HIGHER"
+    ELSE "Program not run"
+END AS COMMENT
+FROM Orders;
+

@@ -1,0 +1,81 @@
+1. UNION:
+
+SELECT customer_id , first_name , last_name , age FROM CUSTOMERS
+UNION
+SELECT order_id , item , amount , customer_id FROM ORDERS;
+
+
+
+SELECT customer_Id , item , amount FROM Orders
+UNION
+SELECT shipping_id , status , customer;
+
+
+
+2. GROUP BY:
+
+SELECT * FROM CUSTOMERS
+GROUP BY FIRST_NAME
+ORDER BY customer_id ASC;
+
+
+SELECT first_name , last_name , age FROM Customers
+GROUP BY age;
+
+SELECT order_id , item , amount FROM Orders
+GROUP BY item;
+
+
+
+3. HAVING:
+
+SELECT Department, sum(Salary) as Salary
+FROM employee
+GROUP BY department
+HAVING SUM(Salary) >= 50000; 
+
+
+
+4. EXIST:
+
+SELECT first_name , last_name , country FROM CUSTOMERS
+WHERE EXISTS (SELECT * FROM ORDERS);
+
+SELECT item , amount FROM Orders
+WHERE EXISTS (SELECT status FROM Shippings);
+
+
+
+5. ANY / ALL:
+
+SELECT first_name , last_name , country FROM Customers
+WHERE customer_id = ANY (SELECT item , amount FROM Orders);
+
+SELECT first_name , last_name , country FROM Customers
+WHERE customer_id = ALL (SELECT item , amount FROM Orders);
+
+
+
+6. SELECT INTO: 
+
+// select into will take your data from customer to testDB:
+
+CREATE DATABASE testDB;
+
+
+SELECT  * INTO testDB 
+FROM Customer;
+
+
+
+
+7.INSERT INTO SELECT:
+
+// INSERT INTO SELECT WILL TAKE ALL DATA FROM ORDER AND MERGE INTO THE CUSTOMER TABLE:
+
+INSERT INTO CUSTOMERS (first_name, last_name , age)
+SELECT item , amount , order_id FROM Orders;
+
+
+INSERT INTO Orders (item , amount ) 
+SELECT first_name , last_name FROM Customers;

@@ -1,0 +1,37 @@
+
+TYPES OF JOINS
+
+
+1. INNER JOIN
+
+SELECT Orders.order_id , Customers.first_name , Customers.last_name , Orders.item , Orders.amount
+FROM Orders
+INNER JOIN CUSTOMERS ON Orders.order_id = Customers.customer_id
+LIMIT 3;
+
+
+2. FULLER JOIN
+
+SELECT Orders.order_id , Customers.first_name , Customers.last_name , Orders.item , Orders.amount
+FROM Orders
+FULL JOIN CUSTOMERS ON Orders.order_id = Customers.customer_id
+LIMIT 5;
+
+
+
+3. LEFT JOIN
+
+
+SELECT Orders.order_id , Customers.first_name , Customers.last_name , Orders.item , Orders.amount
+FROM Orders
+LEFT JOIN CUSTOMERS ON Orders.order_id = Customers.customer_id
+LIMIT 4;
+
+
+
+4. RIGHT JOIN
+
+SELECT Orders.order_id , Customers.first_name , Customers.last_name , Orders.item , Orders.amount
+FROM Orders
+RIGHT JOIN CUSTOMERS ON Orders.order_id = Customers.customer_id
+LIMIT 5;
